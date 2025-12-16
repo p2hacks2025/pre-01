@@ -1,1 +1,53 @@
-.title { color: #ff0000; }
+@charset "utf-8";
+
+.daimei {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.mokuzi-wrap {
+  position: relative;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+
+
+.mokuzi-button {
+  display: block;
+  font-size: 50px;
+  padding: 0px 200px 0px 200px;   /*順番　上　右　下　左　*/
+  border: 2px solid #FFD700;
+  margin: 0px auto;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+/* 枠の外に出るパネル */
+.mokuzi-panel {
+  position: absolute;
+  top: 85%;            /* ★枠の下 */
+  left: 50%;               
+  transform: translateX(-50%) translateY(0px);
+
+  width: 500px;
+  padding: 10px 0px 10px 0px;
+  border: 2px solid #000000;
+  background: #fff;
+
+  /* 最初は隠す */
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+/* ホバーで出す */
+.mokuzi-wrap:hover .mokuzi-panel {
+  opacity: 1;
+  transform: translateX(-50%) translateY(10px);
+  pointer-events: auto;
+}
