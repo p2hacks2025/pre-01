@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+<!-- 
+classはtitleがページ最上の各部の題名に、chapterは各章の題名に使う、
+textは文章、textCenterはtextの中央寄せ、subtextはページ番号に使う
+ -->
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>序章「自称・陽キャ」という存在について</title>   <!-- 章番号＋題名 -->
+        <title>序章「自称・陽キャ」という存在について</title>                                <!-- タイトルは章番号＋章の題名で統一 -->
         <meta name="description" content="まだ決まってないよ">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
     
@@ -12,17 +16,17 @@
     </head>
     <body>
         <h1 class="title">
-            序章<br>「自称・陽キャ」という存在について
+            序章<br>「自称・陽キャ」という存在について                                       <!-- 章番号と章の題名の間は<br>で強制改行 -->
         </h1>
-        <p class="textCenter">
+        <p class="textCenter">                                                           <!-- 改行は基本的に<br>は使わずに、逐一<p class="~~"></p>で囲む -->
             本書を読み進める前に、一つ、言葉の定義をしておきたいと思います。
         </p>
         <p class="textCenter">
             それは、「自称・陽キャ」という呼び方についてです。
 
         </p>
-        <section class="fade-up-target">
-            <p class="chapter" id="i">
+        <section class="fade-up-target">                                                 <!-- 章の題名、内容、その章の処方箋、ページ番号までをsectionでくくる -->
+            <p class="chapter" id="i">                                                   <!-- idは章番号と共通で「英数字で」表記する -->
                 「陽キャ」とは何か
             </p>
             <p class="text">
@@ -39,7 +43,7 @@
                 人々を指す言葉として使われるようになったのです。
             </p>
             <div class="subtext" >
-                <a class="card" href="#i">
+                <a class="card" href="#i">                                                 <!-- ページ番号は章番号と共通、英数字で。 -->
                     - i -
                 </a>
             </div>
@@ -284,9 +288,9 @@
             </div>
         </section>
         <!--ボトム-->
-        <div class="subtext">
+        <div class="subtext">                       <!-- ボトムはこの部分をコピペしてhrefのリンクだけ指定する -->
             <a class="card" href="">
-                ＜ 前の章へ
+                ＜ 前の部へ
             </a>
             <a class="card" href="">
                  トップへ
@@ -295,9 +299,9 @@
                  目次へ
             </a>
             <a class="card" href="">
-                ＜ 次の章へ
+                ＜ 次の部へ
             </a>
         </div>
-        <script src="animation.js"></script>
+        <script src="animation.js"></script>       <!-- scriptを忘れずに書く -->
     </body>
 </html>
