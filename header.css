@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*　headerです　*/
+.site-header{
+    position: sticky;   /* まずは fixed じゃなく sticky */
+    top: 0;
+    background: #A9A9A9;
+    padding: 30px 20px;
+    font-family: serif;
+    z-index: 100;
+    opacity: 0.7;
+}
+
+.site-header a{
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+}
+
+.site-header a:hover{
+    color: #FF0000;
+}

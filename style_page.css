@@ -52,7 +52,7 @@ a:hover{
 
 /* アンカーで飛んだ時に、上に少し余白を作る */
 .chapter[id]{
-  scroll-margin-top: 24px; /* 24〜80pxくらいで調整 */
+  scroll-margin-top: 200px; /* 24〜80pxくらいで調整 */
 }
 
 @media(max-width: 640px){
