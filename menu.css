@@ -42,7 +42,7 @@ body {
   top: 0px;               /* 上から0px */
   right: 20px;             /* 右から20px */
   width: 70px;             /* ボタンの幅 */
-  height: 100px;            /* ボタンの高さ */
+  height: 70px;            /* ボタンの高さ */
   background:linear-gradient(135deg, #667eea 0%, #764ba2 100%) ; /* #2f0369; */    /* 背景色（青色） */
   border: none;            /* 枠線なし */
   /*border-radius: 8px;  */    /* 角を丸く */
@@ -111,7 +111,7 @@ body {
   background: white;       /* 背景色（白） */
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);  /* 左側に影 */
   transition: right 0.3s ease;  /* 右からの位置変化を0.3秒でスムーズに */
-  z-index: 2000;          /* 最前面に表示 */
+  z-index: 9999;          /* 最前面に表示 */
   overflow-y: auto;        /* 縦方向にスクロール可能 */
 }
 

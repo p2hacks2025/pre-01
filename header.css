@@ -3,12 +3,12 @@
 /*　headerです　*/
 .site-header{
     position: sticky;   /* まずは fixed じゃなく sticky */
-    top: 0;
-    background: #A9A9A9;
+    top: 0px;
+    height: 90px;
+    background: #a9a9a9b3;
     padding: 5px 20px;
     font-family: serif;
     z-index: 100;
-    opacity: 0.7;
 }
 
 .site-header a{
