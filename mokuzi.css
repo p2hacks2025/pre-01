@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.daimei{
+    font-family: serif;
+    font-size: 100px;  
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.mokuzi{
+    display: block;    
+    font-family: serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+}
+
+.chapter0, .part1, .part2, .part3, .part4, .part5{
+    display:block;
+    font-family: serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.chapter{
+    display:block;
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: #6fa8be;    
+} 
