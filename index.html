@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ナビゲーションメニュー</title>
+  <!-- CSSファイルをここに読み込む場合は <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <p>
+        
+     </p>
+  <!-- ========================================
+       メインコンテンツ（デモ用のページ内容）
+       ======================================== -->
+  <div class="content">
+    
+  </div>
+
+  <!-- ========================================
+       右上固定のメニューボタン（ハンバーガーメニュー）
+       id="menuBtn" でJavaScriptから操作できるようにする
+       ======================================== -->
+  <button class="menu-btn" id="menuBtn">
+    <!-- ハンバーガーアイコンの3本線 -->
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+
+ 
+  <!-- ========================================
+       半透明オーバーレイ（背景の暗い幕）
+       id="overlay" でJavaScriptから操作できるようにする
+       ======================================== -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- ========================================
+       ナビゲーションメニュー（右から出てくるウィンドウ）
+       id="navMenu" でJavaScriptから操作できるようにする
+       ======================================== -->
+  <nav class="nav-menu" id="navMenu">
+    <!-- メニューのヘッダー部分 -->
+    <div class="menu-header">
+      <h2>栞</h2>
+      <!-- 閉じるボタン（×ボタン） -->
+      <!-- id="closeBtn" でJavaScriptから操作できるようにする -->
+      <button class="close-btn" id="closeBtn">✕</button>
+    </div>
+    
+    <!-- メニュー項目のリスト -->
+    <ul class="menu-list">
+      <li><a href="#home">目次</a></li>
+      <li><a href="#home">序章</a></li>
+      <li><a href="#about">一部</a></li>
+      <li><a href="#services">二部</a></li>
+      <li><a href="#portfolio">三部</a></li>
+      <li><a href="#blog">四部</a></li>
+      <li><a href="#contact">終わりに</a></li>
+      <li><a href="#contact">終わりに</a></li>
+      <li><a href="#contact">終わりに</a></li>
+      <li><a href="#contact">終わりに</a></li>
+      <li><a href="#contact">終わりに</a></li>
+    </ul>
+  </nav>
+
+  <!-- JavaScriptファイルをここに読み込む場合は <script src="script.js"></script> -->
+   <script src="script.js"></script>
+</body>
+</html>
