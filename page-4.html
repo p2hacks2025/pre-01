@@ -7,13 +7,17 @@
         <meta name="description" content="まだ決まってないよ">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
     
-           <link rel="stylesheet" href="style_page.css"> 
-           <link rel="stylesheet" href="style_page_animation.css">
-           <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="style_page.css"> 
+        <link rel="stylesheet" href="style_page_animation.css">
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="fadeinout.css">
            
     </head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <body>
-        
+        <!-- フェードアニメーション -->
+        <div id="fade-overlay"></div>
+
         <header class="site-header">
             <a href="mokuzi.html">TOP</a>
         </header>
@@ -25,7 +29,7 @@
         
         <section class="fade-up-target">
             <p class="chapter" id="16">
-                1. 真の陽キャは、あなたを疲れさせない
+                16. 真の陽キャは、あなたを疲れさせない
                 <br> ――騒がしさは弱さの裏返しだった
             </p>
             <p class="text">
@@ -125,7 +129,7 @@
         
         <section class="fade-up-target">
             <p class="chapter" id="17">
-                2. 太陽(Sun)とネオン(Neon)の違い
+                17. 太陽(Sun)とネオン(Neon)の違い
                 <br> ――本物の明るさは、他者を焦がさない
             </p>
             <p class="text">
@@ -248,7 +252,7 @@
         
         <section class="fade-up-target">
             <p class="chapter" id="18">
-                3. あなたが出会うべき「静かな強者」たち
+                18. あなたが出会うべき「静かな強者」たち
                 <br> ――自分の状態を、自分で選べる人
             </p>
             <p class="text">
@@ -431,6 +435,7 @@
                  次の部へ ＞
             </a>
         </div>
-            <script src="animation.js"></script>
+        <script src="animation.js"></script>
+        <script src="fadeinout.js"></script>
     </body>
 </html>         

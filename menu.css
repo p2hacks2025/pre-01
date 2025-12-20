@@ -40,11 +40,11 @@ body {
 .menu-btn {
   position: fixed;          /* 画面に固定（スクロールしても付いてくる） */
   top: 0px;               /* 上から0px */
-  right: 20px;             /* 右から20px */
-  width: 70px;             /* ボタンの幅 */
-  height: 70px;            /* ボタンの高さ */
-  background:linear-gradient(135deg, #667eea 0%, #764ba2 100%) ; /* #2f0369; */    /* 背景色（青色） */
+  right: 50px;             /* 右から20px */
+  width: 100px;             /* ボタンの幅 */
+  height: 250px;            /* ボタンの高さ */
   border: none;            /* 枠線なし */
+  background-color: #ffffff00;
   /*border-radius: 8px;  */    /* 角を丸く */
   cursor: pointer;         /* マウスを乗せたら指カーソルに */
   display: flex;           /* フレックスボックスで中身を配置 */
@@ -52,15 +52,12 @@ body {
   justify-content: center; /* 縦方向の中央揃え */
   align-items: center;     /* 横方向の中央揃え */
   gap: 5px;               /* 子要素間の隙間 */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* 影をつける */
   transition: all 0.3s ease;  /* すべての変化を0.3秒でスムーズに */
   z-index: 1000;          /* 重なり順（大きいほど前面） */
 }
 
 /* マウスを乗せた時の変化 */
 .menu-btn:hover {
-  
-  background:linear-gradient(135deg, #5063bb 0%, #583879 100%)/* #2980b9*/;     /* 少し濃い青色に変更 */
   transform: scale(1.05);  /* 1.05倍に拡大 */
 }
 
