@@ -1,0 +1,218 @@
+/* ========================================
+   全体のリセットと基本設定
+   ======================================== */
+* {
+  margin: 0;           /* すべての要素の余白をゼロに */
+  padding: 0;          /* すべての要素の内側余白をゼロに */
+  box-sizing: border-box;  /* 幅の計算方法を統一 */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* フォントの設定 */
+  line-height: 1.6;    /* 行の高さを設定（読みやすくする） */
+  color: #333;         /* 文字色を濃いグレーに */
+}
+
+/* ========================================
+   メインコンテンツのスタイル（デモ用）
+   ======================================== */
+.content {
+  padding: 100px 20px;      /* 上下100px、左右20pxの余白 */
+  max-width: 800px;         /* 最大幅を800pxに制限 */
+  margin: 0 auto;           /* 中央寄せ */
+}
+
+.content h1 {
+  margin-bottom: 20px;      /* 見出しの下に余白 */
+  color: #2c3e50;          /* 見出しの色 */
+}
+
+.content p {
+  margin-bottom: 15px;      /* 段落の下に余白 */
+  color: #555;             /* 段落の文字色 */
+}
+
+
+/* ========================================
+   右上固定のメニューボタン
+   【重要】position: fixed で画面に固定
+   ======================================== */
+.menu-btn {
+  position: fixed;          /* 画面に固定（スクロールしても付いてくる） */
+  top: 0px;               /* 上から0px */
+  right: 50px;             /* 右から50px */
+  width: 100px;             /* ボタンの幅 */
+  height: 200px;            /* ボタンの高さ */
+  border: none;            /* 枠線なし */
+  background-color: #ffffff00;
+  /*border-radius: 8px;  */    /* 角を丸く */
+  cursor: pointer;         /* マウスを乗せたら指カーソルに */
+  display: flex;           /* フレックスボックスで中身を配置 */
+  flex-direction: column;  /* 縦方向に並べる */
+  justify-content: center; /* 縦方向の中央揃え */
+  align-items: center;     /* 横方向の中央揃え */
+  gap: 5px;               /* 子要素間の隙間 */
+  transition: all 0.3s ease;  /* すべての変化を0.3秒でスムーズに */
+  z-index: 1000;          /* 重なり順（大きいほど前面） */
+}
+
+/* マウスを乗せた時の変化 */
+.menu-btn:hover {
+  transform: scale(1.05);  /* 1.05倍に拡大 */
+}
+
+/* ========================================
+   ハンバーガーアイコンの3本線
+   ======================================== */
+.menu-btn span {
+  width: 25px;             /* 線の幅 */
+  height: 3px;             /* 線の太さ */
+  background: white;       /* 線の色（白） */
+  border-radius: 2px;      /* 線の角を少し丸く */
+  transition: 0.3s;        /* 変化を0.3秒でスムーズに */
+}
+
+/* ========================================
+   半透明グレーのオーバーレイ（背景の幕）
+   【重要】rgba() で透明度を設定
+   ======================================== */
+.overlay {
+  position: fixed;         /* 画面全体に固定 */
+  top: 0;                 /* 上端から */
+  left: 0;                /* 左端から */
+  width: 100%;            /* 画面幅いっぱい */
+  height: 100%;           /* 画面高さいっぱい */
+  background: rgba(0, 0, 0, 0.5);  /* 黒色50%透明 */
+  opacity: 0;             /* 初期状態は透明（見えない） */
+  visibility: hidden;      /* 初期状態は非表示 */
+  transition: all 0.3s ease;  /* 変化を0.3秒でスムーズに */
+  z-index: 1500;          /* メニューボタンより前、メニューより後ろ */
+}
+
+/* 【重要】JavaScriptで'active'クラスが追加された時の状態 */
+.overlay.active {
+  opacity: 1;             /* 不透明度100%（見える） */
+  visibility: visible;     /* 表示する */
+}
+
+/* ========================================
+   ナビゲーションメニューウィンドウ
+   【重要】right の値を変更してスライドアニメーション
+   ======================================== */
+.nav-menu {
+  position: fixed;         /* 画面に固定 */
+  top: 0;                 /* 上端から */
+  right: -350px;          /* 初期位置は画面外（右に350px分隠れている） */
+  width: 320px;           /* メニューの幅 */
+  height: 100%;           /* 画面の高さいっぱい */
+  background: white;       /* 背景色（白） */
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);  /* 左側に影 */
+  transition: right 0.3s ease;  /* 右からの位置変化を0.3秒でスムーズに */
+  z-index: 9999;          /* 最前面に表示 */
+  overflow-y: auto;        /* 縦方向にスクロール可能 */
+}
+
+/* 【重要】JavaScriptで'active'クラスが追加された時の状態 */
+.nav-menu.active {
+  right: 0;               /* 右端に移動（画面内に表示） */
+}
+
+/* ========================================
+   メニューのヘッダー部分
+   ======================================== */
+.menu-header {
+  padding: 25px 20px;      /* 上下25px、左右20pxの余白 */
+  background: linear-gradient(0deg, #6fa8be 0%, #b7d0da 100%);  /* グラデーション背景 */
+  color: white;            /* 文字色（白） */
+  display: flex;           /* フレックスボックスで配置 */
+  justify-content: space-between;  /* 左右に要素を配置 */
+  align-items: center;     /* 縦方向の中央揃え */
+}
+
+.menu-header h2 {
+  font-size: 22px;         /* 文字サイズ */
+  font-weight: 600;        /* 文字の太さ */
+}
+
+/* ========================================
+   閉じるボタン（×ボタン）
+   ======================================== */
+.close-btn {
+  background: rgba(255, 255, 255, 0.2);  /* 白色20%透明の背景 */
+  border: none;            /* 枠線なし */
+  width: 35px;             /* ボタンの幅 */
+  height: 35px;            /* ボタンの高さ */
+  border-radius: 50%;      /* 完全な円形に */
+  cursor: pointer;         /* マウスを乗せたら指カーソルに */
+  display: flex;           /* フレックスボックスで配置 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center;     /* 縦方向の中央揃え */
+  font-size: 24px;         /* ×マークのサイズ */
+  color: white;            /* ×マークの色（白） */
+  transition: 0.3s;        /* 変化を0.3秒でスムーズに */
+}
+
+/* マウスを乗せた時の変化 */
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);  /* 少し濃い白色に */
+  transform: scale(1.05);  /* 1.05倍に拡大 */
+}
+
+/* ========================================
+   メニューリスト
+   ======================================== */
+.menu-list {
+  list-style: none;        /* リストの黒丸を消す */
+  padding: 0px 0;         /* 上下20pxの余白 */
+}
+
+.menu-list li {
+  border-bottom: 1px solid #f0f0f0;  /* 下に薄い線を引く */
+}
+
+/* メニュー項目のリンク */
+.menu-list a {
+  display: block;          /* ブロック要素として表示 */
+  padding: 15px 25px;      /* 上下18px、左右25pxの余白 */
+  color: #333;            /* 文字色（濃いグレー） */
+  text-decoration: none;   /* 下線を消す */
+  font-size: 16px;         /* 文字サイズ */
+  transition: all 0.3s ease;  /* すべての変化を0.3秒でスムーズに */
+  position: relative;      /* 矢印マークを配置するための基準 */
+}
+
+/* マウスを乗せた時の変化 */
+.menu-list a:hover {
+  background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);     /* 背景色を薄いグレーに */
+  color: #6fa8be;         /* 文字色を紫色に */
+  padding-left: 30px;      /* 左の余白を増やす（右にずれる） */
+}
+
+/* 矢印マーク（▸）の設定 */
+.menu-list a::before {
+  content: '▸';           /* 矢印記号を表示 */
+  position: absolute;      /* 絶対位置で配置 */
+  left: 15px;             /* 左から15px */
+  opacity: 0;             /* 初期状態は透明（見えない） */
+  transition: 0.3s;        /* 変化を0.3秒でスムーズに */
+}
+
+/* マウスを乗せた時の矢印マーク */
+.menu-list a:hover::before {
+  opacity: 1;             /* 不透明度100%（見える） */
+}
+
+/* ========================================
+   レスポンシブ対応（画面幅480px以下）
+   ======================================== */
+@media (max-width: 640px) {
+  .nav-menu {
+    width: 280px;         /* メニューの幅を狭く */
+    right: -280px;        /* 初期位置も調整 */
+  }
+
+  .menu-btn{
+    height: 80px;            /* ボタンの高さ */
+    right: 10px;             /* 右から40px */
+}
+}
