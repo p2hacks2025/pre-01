@@ -27,9 +27,8 @@ body{
   transform: translateY(24px);
   transition: opacity var(--duration) var(--easing), transform var(--duration) var(--easing);
   will-change: opacity, transform;
-  background: linear-gradient(180deg,#fff,#fafafa);
+  background: #ffffff00;
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 /* visible クラスが付いたらフェードイン */

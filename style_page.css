@@ -55,6 +55,20 @@ a:hover{
   scroll-margin-top: 200px; /* 24〜80pxくらいで調整 */
 }
 
+html, body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body{
+    background-image: url("bg_paper.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 @media(max-width: 640px){
     .title{
         font-size: 40px;

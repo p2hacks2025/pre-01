@@ -40,9 +40,9 @@ body {
 .menu-btn {
   position: fixed;          /* 画面に固定（スクロールしても付いてくる） */
   top: 0px;               /* 上から0px */
-  right: 50px;             /* 右から20px */
+  right: 50px;             /* 右から50px */
   width: 100px;             /* ボタンの幅 */
-  height: 250px;            /* ボタンの高さ */
+  height: 200px;            /* ボタンの高さ */
   border: none;            /* 枠線なし */
   background-color: #ffffff00;
   /*border-radius: 8px;  */    /* 角を丸く */
@@ -122,7 +122,7 @@ body {
    ======================================== */
 .menu-header {
   padding: 25px 20px;      /* 上下25px、左右20pxの余白 */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);  /* グラデーション背景 */
+  background: linear-gradient(0deg, #6fa8be 0%, #b7d0da 100%);  /* グラデーション背景 */
   color: white;            /* 文字色（白） */
   display: flex;           /* フレックスボックスで配置 */
   justify-content: space-between;  /* 左右に要素を配置 */
@@ -155,7 +155,7 @@ body {
 /* マウスを乗せた時の変化 */
 .close-btn:hover {
   background: rgba(255, 255, 255, 0.3);  /* 少し濃い白色に */
-  transform: rotate(90deg);  /* 90度回転 */
+  transform: scale(1.05);  /* 1.05倍に拡大 */
 }
 
 /* ========================================
@@ -183,8 +183,8 @@ body {
 
 /* マウスを乗せた時の変化 */
 .menu-list a:hover {
-  background: #f8f9fa;     /* 背景色を薄いグレーに */
-  color: #667eea;         /* 文字色を紫色に */
+  background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);     /* 背景色を薄いグレーに */
+  color: #6fa8be;         /* 文字色を紫色に */
   padding-left: 35px;      /* 左の余白を増やす（右にずれる） */
 }
 
@@ -205,9 +205,14 @@ body {
 /* ========================================
    レスポンシブ対応（画面幅480px以下）
    ======================================== */
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .nav-menu {
     width: 280px;         /* メニューの幅を狭く */
     right: -280px;        /* 初期位置も調整 */
   }
+
+  .menu-btn{
+    height: 80px;            /* ボタンの高さ */
+    right: 30px;             /* 右から40px */
+}
 }
