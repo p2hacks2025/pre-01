@@ -40,7 +40,7 @@ body {
 .menu-btn {
   position: fixed;          /* 画面に固定（スクロールしても付いてくる） */
   top: 0px;               /* 上から0px */
-  right: 50px;             /* 右から50px */
+  right: 80px;             /* 右から50px */
   width: 100px;             /* ボタンの幅 */
   height: 200px;            /* ボタンの高さ */
   border: none;            /* 枠線なし */
@@ -58,7 +58,7 @@ body {
 
 /* マウスを乗せた時の変化 */
 .menu-btn:hover {
-  transform: scale(1.05);  /* 1.05倍に拡大 */
+  transform:translate(0px, 30px);
 }
 
 /* ========================================
@@ -173,7 +173,9 @@ body {
 /* メニュー項目のリンク */
 .menu-list a {
   display: block;          /* ブロック要素として表示 */
-  padding: 15px 25px;      /* 上下18px、左右25pxの余白 */
+  padding-top: 15px;       /* 上下18px、左20pxの余白 */
+  padding-bottom: 15px;
+  padding-left:15px;
   color: #333;            /* 文字色（濃いグレー） */
   text-decoration: none;   /* 下線を消す */
   font-size: 16px;         /* 文字サイズ */
@@ -185,15 +187,14 @@ body {
 .menu-list a:hover {
   background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);     /* 背景色を薄いグレーに */
   color: #6fa8be;         /* 文字色を紫色に */
-  padding-left: 30px;      /* 左の余白を増やす（右にずれる） */
-  padding-right: 30px;
+  padding-left: 20px;      /* 左の余白を増やす（右にずれる） */
 }
 
 /* 矢印マーク（▸）の設定 */
 .menu-list a::before {
   content: '▸';           /* 矢印記号を表示 */
   position: absolute;      /* 絶対位置で配置 */
-  left: 15px;             /* 左から15px */
+  left: 5px;             /* 左から5px */
   opacity: 0;             /* 初期状態は透明（見えない） */
   transition: 0.3s;        /* 変化を0.3秒でスムーズに */
 }
