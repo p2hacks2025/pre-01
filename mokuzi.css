@@ -13,24 +13,23 @@
     font-size: 50px;
     font-weight: bold;
     text-align: center;
-    margin: 30px;
 }
 
 .chapter0, .part1, .part2, .part3, .part4, .part5{
     display:block;
     font-family: serif;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-left: 30px;
 }
 
 .chapter{
     display:block;
     font-family: serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 20px;
+    font-size: 20px;
+    margin: 30px;
 }
 
 a{
@@ -59,9 +58,22 @@ body{
 }
 
 @media(max-width: 640px){
-    .title{
-        font-size: 40px;
+    .mokuji{
+        font-size: 25px;
         margin-bottom: 30px;
+    }
+
+    .chapter0, .part1, .part2, .part3, .part4, .part5{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    }
+
+    .chapter{
+        font-size: 15px;
+        margin: 20px;
     }
 
     .text{

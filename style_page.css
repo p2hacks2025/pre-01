@@ -69,6 +69,11 @@ body{
     background-attachment: fixed;
 }
 
+p {
+  margin: 0 0 10px 0; /* 段落の下に少し余白 */
+}
+
+
 @media(max-width: 640px){
     .title{
         font-size: 40px;
