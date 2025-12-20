@@ -186,6 +186,7 @@ body {
   background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);     /* 背景色を薄いグレーに */
   color: #6fa8be;         /* 文字色を紫色に */
   padding-left: 30px;      /* 左の余白を増やす（右にずれる） */
+  padding-right: 30px;
 }
 
 /* 矢印マーク（▸）の設定 */
