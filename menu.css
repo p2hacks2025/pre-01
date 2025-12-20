@@ -163,7 +163,7 @@ body {
    ======================================== */
 .menu-list {
   list-style: none;        /* リストの黒丸を消す */
-  padding: 20px 0;         /* 上下20pxの余白 */
+  padding: 0px 0;         /* 上下20pxの余白 */
 }
 
 .menu-list li {
@@ -173,7 +173,7 @@ body {
 /* メニュー項目のリンク */
 .menu-list a {
   display: block;          /* ブロック要素として表示 */
-  padding: 18px 25px;      /* 上下18px、左右25pxの余白 */
+  padding: 15px 25px;      /* 上下18px、左右25pxの余白 */
   color: #333;            /* 文字色（濃いグレー） */
   text-decoration: none;   /* 下線を消す */
   font-size: 16px;         /* 文字サイズ */
@@ -185,7 +185,7 @@ body {
 .menu-list a:hover {
   background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);     /* 背景色を薄いグレーに */
   color: #6fa8be;         /* 文字色を紫色に */
-  padding-left: 35px;      /* 左の余白を増やす（右にずれる） */
+  padding-left: 30px;      /* 左の余白を増やす（右にずれる） */
 }
 
 /* 矢印マーク（▸）の設定 */

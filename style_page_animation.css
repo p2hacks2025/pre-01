@@ -1,5 +1,5 @@
 :root{
-  --duration: 3000ms;
+  --duration: 1500ms;
   --easing: cubic-bezier(.2,.9,.3,1);
 }
 

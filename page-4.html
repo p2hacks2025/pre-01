@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="style_page.css"> 
         <link rel="stylesheet" href="style_page_animation.css">
         <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="menu.css">
         <link rel="stylesheet" href="fadeinout.css">
            
     </head>
@@ -18,8 +19,62 @@
         <!-- フェードアニメーション -->
         <div id="fade-overlay"></div>
 
+        <!-- ヘッダー＆しおり -->
         <header class="site-header">
-            <a href="mokuzi.html">TOP</a>
+                <a href="mokuzi.html"><img src="logo.png" alt="logo_product" style="width:200px; height:auto; margin-left: 20px;"></a>
+            <!-- ========================================
+                メインコンテンツ（デモ用のページ内容）
+                ======================================== -->
+            <div class="content">
+                
+            </div>
+
+            <!-- ========================================
+                右上固定のメニューボタン（ハンバーガーメニュー）
+                id="menuBtn" でJavaScriptから操作できるようにする
+                ======================================== -->
+            <button class="menu-btn" id="menuBtn">
+                <img src="bookmark.png" width="100px" height="300px" alt="menu">
+                <!-- ハンバーガーアイコンの3本線 -->
+                <!-- <span></span>
+                <span></span>
+                <span></span> -->
+            </button>
+
+
+            <!-- ========================================
+                半透明オーバーレイ（背景の暗い幕）
+                id="overlay" でJavaScriptから操作できるようにする
+                ======================================== -->
+            <div class="overlay" id="overlay"></div>
+
+            <!-- ========================================
+                ナビゲーションメニュー（右から出てくるウィンドウ）
+                id="navMenu" でJavaScriptから操作できるようにする
+                ======================================== -->
+            <nav class="nav-menu" id="navMenu">
+                <!-- メニューのヘッダー部分 -->
+                <div class="menu-header">
+                <h2>栞</h2>
+                <!-- 閉じるボタン（×ボタン） -->
+                <!-- id="closeBtn" でJavaScriptから操作できるようにする -->
+                <button class="close-btn" id="closeBtn">✕</button>
+                </div>
+                
+                <!-- メニュー項目のリスト -->
+                <ul class="menu-list">
+                <li><a href="mokuzi.html">目次</a></li>
+                <li><a href="page-0.html">序章</a></li>
+                <li><a href="page-1.html">第１部</a></li>
+                <li><a href="page-2.html">第２部</a></li>
+                <li><a href="page-3.html">第３部</a></li>
+                <li><a href="page-4.html">第４部</a></li>
+                <li><a href="#16" style="margin-left: 20px;">16. 真の陽キャは、あなたを疲れさせない</a></li>
+                <li><a href="#17" style="margin-left: 20px;">17. 太陽(Sun)とネオン(Neon)の違い</a></li>
+                <li><a href="#18" style="margin-left: 20px;">18. あなたが出会うべき「静かな強者」たち</a></li>
+                <li><a href="page-5.html">終わりに</a></li>
+                </ul>
+            </nav>
         </header>
         
         <h1 class="title">
@@ -436,6 +491,7 @@
             </a>
         </div>
         <script src="animation.js"></script>
+        <script src="menu.js"></script>
         <script src="fadeinout.js"></script>
     </body>
 </html>         
