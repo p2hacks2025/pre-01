@@ -47,12 +47,19 @@ a{
 }
 
 a:hover{
-    color: #6fa8be; 
+    color: #6fa8be;
 }
 
 /* アンカーで飛んだ時に、上に少し余白を作る */
 .chapter[id]{
   scroll-margin-top: 200px; /* 24〜80pxくらいで調整 */
+}
+
+.bg{
+    background-image:"bg_paper.png";
+    width: 1536px;
+    height: 1024px;
+    background-size: cover;
 }
 
 @media(max-width: 640px){
